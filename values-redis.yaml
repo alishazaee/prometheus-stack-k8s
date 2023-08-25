@@ -1,0 +1,19 @@
+master:
+  count: 1
+
+replica:
+  replicaCount: 0
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+
+persistence:
+  enabled: true
+  storageClass: "default"
+  accessMode: ReadWriteOnce
+  size: 1Gi
