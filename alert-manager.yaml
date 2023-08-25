@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: main-alertmanager
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  route:
+    receiver: 'telegram'
+    repeatInterval: 30m
+    routes:
+    - matchers:
+      - name: alertname
+        value: HostHighCPULoad
+    - matchers:
+      - name: alertname
+        value: KubernetesPodCrashLooping
+      repeatInterval: 10m
+  receivers:
+  - name: telegram
+    webhookConfigs:
+    - url: 'http://telepush.dev/api/inlets/alertmanager/80a073'   
+      http_config:
+  
