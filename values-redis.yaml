@@ -4,6 +4,8 @@ master:
 replica:
   replicaCount: 0
 
+auth: 
+  enabled: false
 resources:
   limits:
     cpu: 100m

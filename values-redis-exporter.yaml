@@ -1,5 +1,6 @@
-redis:
-  uri: "redis://redis-master:6379"
+# redis:
+#   uri: "redis://redis-master:6379"
+redisAddress: redis://redis-master:6379
 
 serviceMonitor:
   enabled: true
