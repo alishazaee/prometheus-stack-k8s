@@ -5,8 +5,7 @@ This repository provides a guide and configuration files for installing and conf
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Accessing Prometheus and Grafana](#accessing-prometheus-and-grafana)
+- [Redis Configuration](#Redis Configuration)
 - [Alerting](#alerting)
 - [Additional Resources](#additional-resources)
 - [Contributing](#contributing)
@@ -18,26 +17,15 @@ Prometheus is an open-source monitoring and alerting tool that is widely used in
 This repository aims to simplify the setup process of the Prometheus stack on Kubernetes by providing Helm charts and configuration files. It also includes guides and best practices for configuring and customizing the stack for your specific requirements.
 
 ## Installation
-To install the Prometheus stack on your Kubernetes cluster, follow the steps in the [Installation Guide](./docs/installation.md). The guide provides detailed instructions on prerequisites, Helm chart installation, and namespace configuration.
+To install the Prometheus stack on your Kubernetes cluster, follow the steps in the [Installation Guide](./commands-prometheus.md). The guide provides detailed instructions on prerequisites, Helm chart installation, and namespace configuration.
 
-## Configuration
-Once you have installed the Prometheus stack, you can customize its configuration to suit your needs. The [Configuration Guide](./docs/configuration.md) covers various aspects of configuration, such as:
-
-- Setting up and modifying Prometheus scrape targets
-- Configuring Prometheus rules and alerts
-- Customizing Grafana dashboards
-- Implementing service discovery for exporters
-- And more...
+## Redis Configuration
+Once you have installed the Prometheus stack, you can customize its configuration to suit your needs. In this example we have set up a Redis database and we aim to monitor it using helm charts. The [commands-redis](./commands-redis.md) covers various aspects of configuration, 
 
 Refer to this guide to make the necessary configuration changes based on your specific monitoring requirements.
 
-## Accessing Prometheus and Grafana
-After the installation, you can access the Prometheus and Grafana interfaces to view, query, and analyze metrics data. The [Access Guide](./docs/access.md) explains how to access Prometheus and Grafana from your local machine or within the Kubernetes cluster.
-
-The guide also covers topics like authentication, SSL termination, and securing the Prometheus and Grafana deployments.
-
 ## Alerting
-Alerting is a crucial component of any monitoring system. Prometheus supports powerful alerting capabilities that allow you to define alert rules, configure receivers, and manage alerting rules. The [Alerting Guide](./docs/alerting.md) provides details on setting up and managing alerts in Prometheus.
+Alerting is a crucial component of any monitoring system. Prometheus supports powerful alerting capabilities that allow you to define alert rules, configure receivers, and manage alerting rules. The [alert rules file](./alert-rules.md) provides some examples for prometheus alerting system.
 
 It covers topics such as defining alerting rules, using recording rules, configuring notification channels, and integrating with external services like PagerDuty or Slack.
 
@@ -51,7 +39,5 @@ It covers topics such as defining alerting rules, using recording rules, configu
 These resources provide additional information and in-depth documentation on Prometheus, Grafana, Helm charts, and Kubernetes.
 
 ## Contributing
-Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request. Please refer to the [Contributing Guidelines](./CONTRIBUTING.md) for more information on how to contribute.
+Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request. 
 
-## License
-This repository is licensed under the [MIT License](./LICENSE). Feel free to use and modify the codebase as per the terms of the license.
