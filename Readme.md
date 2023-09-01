@@ -5,7 +5,7 @@ This repository provides a guide and configuration files for installing and conf
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Redis Configuration](#Redis Configuration)
+- [Configuration](#configuration)
 - [Alerting](#alerting)
 - [Additional Resources](#additional-resources)
 - [Contributing](#contributing)
@@ -19,7 +19,7 @@ This repository aims to simplify the setup process of the Prometheus stack on Ku
 ## Installation
 To install the Prometheus stack on your Kubernetes cluster, follow the steps in the [Installation Guide](./commands-prometheus.md). The guide provides detailed instructions on prerequisites, Helm chart installation, and namespace configuration.
 
-## Redis Configuration
+## Configuration
 Once you have installed the Prometheus stack, you can customize its configuration to suit your needs. In this example we have set up a Redis database and we aim to monitor it using helm charts. The [commands-redis](./commands-redis.md) covers various aspects of configuration, 
 
 Refer to this guide to make the necessary configuration changes based on your specific monitoring requirements.
