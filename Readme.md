@@ -20,12 +20,12 @@ This repository aims to simplify the setup process of the Prometheus stack on Ku
 To install the Prometheus stack on your Kubernetes cluster, follow the steps in the [Installation Guide](./commands-prometheus.md). The guide provides detailed instructions on prerequisites, Helm chart installation, and namespace configuration.
 
 ## Configuration
-Once you have installed the Prometheus stack, you can customize its configuration to suit your needs. In this example we have set up a Redis database and we aim to monitor it using helm charts. The [commands-redis](./commands-redis.md) covers various aspects of configuration, 
+Once you have installed the Prometheus stack, you can customize its configuration to suit your needs. In this example we have set up a Redis database and we aim to monitor it using helm charts. The [Redis Installation guide](./commands-redis.md) helps you to install redis and prepare it for monitoring
 
 Refer to this guide to make the necessary configuration changes based on your specific monitoring requirements.
 
 ## Alerting
-Alerting is a crucial component of any monitoring system. Prometheus supports powerful alerting capabilities that allow you to define alert rules, configure receivers, and manage alerting rules. The [alert rules file](./alert-rules.md) provides some examples for prometheus alerting system.
+Alerting is a crucial component of any monitoring system. Prometheus supports powerful alerting capabilities that allow you to define alert rules, configure receivers, and manage alerting rules. The [alert rules file](./alert-rules.yaml) provides some examples for prometheus alerting system.
 
 It covers topics such as defining alerting rules, using recording rules, configuring notification channels, and integrating with external services like PagerDuty or Slack.
 
